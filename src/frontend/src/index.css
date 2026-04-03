@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("/assets/fonts/PlusJakartaSans.woff2") format("woff2");
+  font-weight: 300 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Bricolage Grotesque";
+  src: url("/assets/fonts/BricolageGrotesque.woff2") format("woff2");
+  font-weight: 200 800;
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    --radius: 0.75rem;
+
+    /* Navy brand: #0B1F3A → #122B57 */
+    --nav-bg-from: 0.245 0.095 248;
+    --nav-bg-to: 0.3 0.11 248;
+
+    /* Page background: #F3F5F8 */
+    --background: 0.972 0.008 248;
+    --foreground: 0.145 0.02 248;
+
+    /* Cards: #FFFFFF */
+    --card: 1 0 0;
+    --card-foreground: 0.145 0.02 248;
+
+    --popover: 1 0 0;
+    --popover-foreground: 0.145 0.02 248;
+
+    /* Primary: navy dark */
+    --primary: 0.245 0.095 248;
+    --primary-foreground: 0.985 0 0;
+
+    --secondary: 0.94 0.015 248;
+    --secondary-foreground: 0.245 0.095 248;
+
+    --muted: 0.94 0.015 248;
+    --muted-foreground: 0.48 0.02 248;
+
+    /* Accent: Teal #18B6B1 */
+    --accent: 0.65 0.13 192;
+    --accent-foreground: 1 0 0;
+
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 0.985 0 0;
+
+    /* border: #E6EAF0 */
+    --border: 0.913 0.02 248;
+    --input: 0.913 0.02 248;
+    --ring: 0.65 0.13 192;
+
+    /* Chart colors */
+    --chart-1: 0.65 0.13 192;
+    --chart-2: 0.55 0.2 285;
+    --chart-3: 0.56 0.17 142;
+    --chart-4: 0.72 0.19 55;
+    --chart-5: 0.65 0.22 25;
+
+    /* Teal accent: #18B6B1 */
+    --teal: 0.65 0.13 192;
+    /* Green: #22C55E */
+    --green: 0.56 0.17 142;
+    /* Purple: #7C3AED */
+    --purple: 0.5 0.22 285;
+    /* Gold: #F5C542 */
+    --gold: 0.82 0.17 89;
+    /* Orange */
+    --orange: 0.67 0.19 42;
+
+    --sidebar: 0.245 0.095 248;
+    --sidebar-foreground: 0.985 0 0;
+    --sidebar-primary: 0.65 0.13 192;
+    --sidebar-primary-foreground: 0.985 0 0;
+    --sidebar-accent: 0.3 0.08 248;
+    --sidebar-accent-foreground: 0.985 0 0;
+    --sidebar-border: 0.35 0.06 248;
+    --sidebar-ring: 0.65 0.13 192;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-display;
+  }
+}
